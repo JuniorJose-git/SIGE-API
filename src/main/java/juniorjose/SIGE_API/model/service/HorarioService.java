@@ -43,7 +43,7 @@ public class HorarioService {
         Horario existente = repository.findById(id)
                 .orElseThrow(() -> new ApiException("Horario com id " + id + " não encontrado",HttpStatus.NOT_FOUND));
 
-        BeanUtils.copyProperties(horario, existente, BeanUtilsHelper.getNullPropertyNames(existente));
+        BeanUtils.copyProperties(horario, existente, BeanUtilsHelper.getNullPropertyNames(horario));
 
         return repository.save(existente);
     }

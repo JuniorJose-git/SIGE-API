@@ -37,7 +37,7 @@ public class SalaService {
         Sala existente = repository.findById(id)
                 .orElseThrow(() -> new ApiException("Sala com id " + id + " não encontrada",HttpStatus.NOT_FOUND));
 
-        BeanUtils.copyProperties(sala, existente, BeanUtilsHelper.getNullPropertyNames(existente));
+        BeanUtils.copyProperties(sala, existente, BeanUtilsHelper.getNullPropertyNames(sala));
 
         return repository.save(existente);
     }

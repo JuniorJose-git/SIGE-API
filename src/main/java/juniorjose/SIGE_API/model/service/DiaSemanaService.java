@@ -29,7 +29,7 @@ public class DiaSemanaService {
 
     public DiaSemana create(DiaSemana diaSemana) throws ApiException{
         if(diaSemana.getNome() == null || diaSemana.getNome().isEmpty()){
-            throw new ApiException("O dnome do ia da semana precisa ser preenchido", HttpStatus.BAD_REQUEST);
+            throw new ApiException("O nome do dia da semana precisa ser preenchido", HttpStatus.BAD_REQUEST);
         }
         return repository.save(diaSemana);
     }
@@ -38,7 +38,7 @@ public class DiaSemanaService {
         DiaSemana existente = repository.findById(id)
                 .orElseThrow(() -> new ApiException("Dia da semana com id " + id + " não encontrado",HttpStatus.NOT_FOUND));
 
-        BeanUtils.copyProperties(diaSemana, existente, BeanUtilsHelper.getNullPropertyNames(existente));
+        BeanUtils.copyProperties(diaSemana, existente, BeanUtilsHelper.getNullPropertyNames(diaSemana));
 
         return repository.save(existente);
     }

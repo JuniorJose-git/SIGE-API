@@ -1,9 +1,8 @@
 package juniorjose.SIGE_API.model.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
-import org.springframework.cglib.core.Local;
-
-import java.time.LocalDate;
+import java.time.LocalTime;
 
 @Entity
 @Table(name="horarios")
@@ -12,15 +11,17 @@ public class Horario {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private LocalDate horarioInicio;
-    private LocalDate horarioFim;
+    private LocalTime horarioInicio;
+
+    private LocalTime horarioFim;
+
     private String nome;
 
     public Horario(){}
 
     public Horario(Long id,
-                   LocalDate horarioInicio,
-                   LocalDate horarioFim,
+                   LocalTime horarioInicio,
+                   LocalTime horarioFim,
                    String nome){
         this.id=id;
         this.horarioInicio=horarioInicio;
@@ -36,19 +37,19 @@ public class Horario {
         this.id = id;
     }
 
-    public LocalDate getHorarioInicio() {
+    public LocalTime getHorarioInicio() {
         return horarioInicio;
     }
 
-    public void setHorarioInicio(LocalDate horarioInicio) {
+    public void setHorarioInicio(LocalTime horarioInicio) {
         this.horarioInicio = horarioInicio;
     }
 
-    public LocalDate getHorarioFim() {
+    public LocalTime getHorarioFim() {
         return horarioFim;
     }
 
-    public void setHorarioFim(LocalDate horarioFim) {
+    public void setHorarioFim(LocalTime horarioFim) {
         this.horarioFim = horarioFim;
     }
 

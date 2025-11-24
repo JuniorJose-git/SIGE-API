@@ -1,0 +1,18 @@
+2025-11-24 09:11:52.506975-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "DATE '2025-03-15' (HORARIOS_COPY_3_0: ""HORARIO_FIM"" TIME(6))"; SQL statement:
+INSERT INTO "PUBLIC"."HORARIOS_COPY_3_0"("ID", "HORARIO_FIM", "HORARIO_INICIO", "NOME") OVERRIDING SYSTEM VALUE SELECT "ID", "HORARIO_FIM", "HORARIO_INICIO", "NOME" FROM "PUBLIC"."HORARIOS" [22018-232]
+2025-11-24 09:11:52.513559-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "DATE '2025-03-15' (HORARIOS_COPY_3_1: ""HORARIO_INICIO"" TIME(6))"; SQL statement:
+INSERT INTO "PUBLIC"."HORARIOS_COPY_3_1"("ID", "HORARIO_FIM", "HORARIO_INICIO", "NOME") OVERRIDING SYSTEM VALUE SELECT "ID", "HORARIO_FIM", "HORARIO_INICIO", "NOME" FROM "PUBLIC"."HORARIOS" [22018-232]
+2025-11-24 09:12:39.677533-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "DATE '2025-03-15' (HORARIOS_COPY_3_0: ""HORARIO_FIM"" TIME(6))"; SQL statement:
+INSERT INTO "PUBLIC"."HORARIOS_COPY_3_0"("ID", "HORARIO_FIM", "HORARIO_INICIO", "NOME") OVERRIDING SYSTEM VALUE SELECT "ID", "HORARIO_FIM", "HORARIO_INICIO", "NOME" FROM "PUBLIC"."HORARIOS" [22018-232]
+2025-11-24 09:12:39.682734-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "DATE '2025-03-15' (HORARIOS_COPY_3_1: ""HORARIO_INICIO"" TIME(6))"; SQL statement:
+INSERT INTO "PUBLIC"."HORARIOS_COPY_3_1"("ID", "HORARIO_FIM", "HORARIO_INICIO", "NOME") OVERRIDING SYSTEM VALUE SELECT "ID", "HORARIO_FIM", "HORARIO_INICIO", "NOME" FROM "PUBLIC"."HORARIOS" [22018-232]
+2025-11-24 09:12:44.125143-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "TIME '12:30:00' (HORARIOS: ""HORARIO_FIM"" DATE)"; SQL statement:
+insert into horarios (horario_fim,horario_inicio,nome,id) values (?,?,?,?) [22018-232]
+2025-11-24 09:13:18.105667-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "TIME '12:30:00' (HORARIOS: ""HORARIO_FIM"" DATE)"; SQL statement:
+insert into horarios (horario_fim,horario_inicio,nome,id) values (?,?,?,?) [22018-232]
